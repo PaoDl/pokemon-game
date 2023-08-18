@@ -35,7 +35,7 @@
     >
 
     <img
-    v-if="showPokemon"
+    v-if="showPokemon" 
     :src="imgSrc" 
     class="fade-in"
     alt="pokemon"
