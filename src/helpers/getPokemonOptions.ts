@@ -1,12 +1,8 @@
 import pokemonApi from "@/api/PokemonApi";
 import type { Pokemon } from "@/interfaces/Pokemon.interfaces";
 import type { AxiosResponse } from "axios";
+import type { ListPokemonOptions } from '@/interfaces/ListPokemonOptions.interfaces';
 
-interface ListPokemonOptions{
-id:number,
-name:string,
-
-}
 
 const getPokemons= (): number[]=>{
     const pokemonArr: number[]=Array.from(Array(650))
@@ -18,7 +14,7 @@ const getPokemonOptions = async():Promise <ListPokemonOptions[]>=>{
     const mixedPokemons: number[]= getPokemons().sort(()=> Math.random()- 0.5); //realiza un mix de los pokemon  usando un rando y eliminando 
 
 
-    const pokemons:ListPokemonOptions[] =await getPokemonNames(mixedPokemons.splice(0,4)); //optine las 4 posiciones
+    const pokemons:ListPokemonOptions[] =await getPokemonNames(mixedPokemons.splice(0,4)); //obtine las 4 posiciones
     
     return pokemons
 }//al momento de enviar un async la funcion/constante se vuelve async y debe tener un await de la const llamanda
