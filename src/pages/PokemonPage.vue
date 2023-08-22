@@ -29,6 +29,7 @@ import type pokemonApi from '@/api/PokemonApi';
           checkAnswer( selectedId: number){            
             this.showPokemon= true;
             this.showAnswer=true;
+            this.pokemonArr =[]
             if (!this.pokemon)return;
             if (selectedId ===this.pokemon?.id){
                 
