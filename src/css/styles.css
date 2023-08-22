@@ -2,3 +2,7 @@ html, body{
     background-color: rgb(210,155,253);
     margin: 0px;
 }
+ button{
+    border-radius: 0%;
+    background-color: cornsilk;
+ }
